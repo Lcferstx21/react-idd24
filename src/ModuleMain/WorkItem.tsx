@@ -38,7 +38,7 @@ const WorkItem: React.FC<WorkItemProps> = ({
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <Link to={`/work/${id}`} className={styles.workLink}>
+          <Link to={`/work/${id}`}>
             {" "}
             {/* 使用id来构建链接 */}
             <img
@@ -48,17 +48,19 @@ const WorkItem: React.FC<WorkItemProps> = ({
             />
           </Link>
         </div>
+        <Link to={`/work/${id}`}>
+          <div
+            className={`${styles.workMsg} ${isHovered ? styles.show : ""}`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <h3>{authorName}</h3>
+            <h3 className={styles.authorNameEn}>{authorNameEn}</h3>
 
-        <div className={`${styles.workMsg} ${isHovered ? styles.show : ""}`}>
-          <h3>{authorName}</h3>
-          <h3 className={styles.authorNameEn}>{authorNameEn}</h3>
-
-          <p>
-            {researchTheme}
-            <br />
-            {researchThemeEn}
-          </p>
-        </div>
+            <p>{researchTheme}</p>
+            <p className={styles.researchThemeEn}>{researchThemeEn}</p>
+          </div>
+        </Link>
       </div>
     </div>
   );

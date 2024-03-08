@@ -7,6 +7,7 @@ import xiaohongshuLogo from "./image/logo_xiaohongshu.svg";
 import facebookLogo from "./image/logo_facebook.svg";
 import maps from "./image/maps.png";
 import WorksOverview from "./WorksOverview";
+// import box2 from "./imageWorks/box2.png";
 
 interface IHeaderProps {}
 
@@ -75,11 +76,17 @@ const Header: React.FC<IHeaderProps> = () => {
             → <s>会場</s>
           </h2>
           <p className={styles.h3_eng}>Place</p>
-          <p
+          <div
             id="content2"
             className={`${styles.toggleContent} ${styles.hidden}`}
           >
-            <img src={maps} className={styles.mapsImg}></img>
+            <div>
+              {/* <img src={box2} alt="" className={styles.boxMap} /> */}
+              <div className={styles.mapContainer}>
+                <img src={maps} className={styles.mapsImg}></img>
+              </div>
+            </div>
+
             <p className={styles.mapsTxt}>
               <a
                 href="https://www.google.com/maps/place/BUoY+Cafe+%26+Bar/@35.7462913,139.8008161,16.6z/data=!3m1!5s0x60188e5a5d7ef6e5:0x1efc6e4692915edc!4m5!3m4!1s0x60188e5a5d7c19e7:0xa65b19b78c557ca2!8m2!3d35.7435032!4d139.8021921?shorturl=1"
@@ -95,7 +102,7 @@ const Header: React.FC<IHeaderProps> = () => {
               <br />
               出口１より徒歩6分、西口より徒歩8分
             </p>
-          </p>
+          </div>
         </div>
         {/* works */}
         <div className={`${styles.link} ${styles.works}`}>
