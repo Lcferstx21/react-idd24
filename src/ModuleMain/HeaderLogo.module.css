@@ -1,0 +1,6 @@
+.info__logo {
+  position: fixed;
+  padding-left: 20px;
+  padding-top: 20px;
+  z-index: 2;
+}

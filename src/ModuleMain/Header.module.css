@@ -1,0 +1,518 @@
+.top__left__info {
+  /* 全局滚动;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 100; */
+
+  /* 只有Header可以滚动 */
+  position: fixed;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 100;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+/* 针对WebKit浏览器隐藏滚动条 */
+.top__left__info::-webkit-scrollbar {
+  display: none;
+}
+
+/* 对于Firefox，可以使用以下样式 */
+.top__left__info {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* 对于IE和Edge */
+.top__left__info {
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.info__title {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  /* padding-top: 50px; */
+  padding-bottom: 20px;
+  gap: 0px;
+}
+
+.info__link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.link {
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.info__date {
+  align-self: stretch;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 20px;
+}
+
+.date__course {
+  display: block;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.date__place {
+  display: block;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+h1 {
+  color: #454545;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 125%;
+  margin: 0px;
+}
+
+h2 {
+  color: #454545;
+  font-size: 20px;
+  font-style: light;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0px;
+}
+
+.h2_eng {
+  color: #454545;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16x;
+  /* 140.346% */
+  padding-top: 5px;
+
+  margin: 0px;
+}
+
+h3 {
+  color: #454545;
+  font-size: 12px;
+  font-style: light;
+  font-weight: 300;
+  line-height: normal;
+
+  padding: 0;
+  margin: 0px;
+}
+
+.h3_eng {
+  color: #454545;
+  font-size: 8px;
+  font-style: light;
+  font-weight: 300;
+  line-height: auto;
+
+  margin: 0px;
+}
+
+p {
+  color: #454545;
+  font-size: 20px;
+  font-style: light;
+  font-weight: 300;
+  line-height: auto;
+
+  margin: 0px;
+}
+
+.message:hover {
+  cursor: url("./image/icon_message.png") 32 32, auto;
+}
+
+.works:hover {
+  cursor: url("./image/icon_work.png") 32 32, auto;
+}
+
+.researchGroup:hover {
+  cursor: url("./image/icon_researchGroup.png") 32 32, auto;
+}
+
+.date__place:hover {
+  cursor: url("./image/icon_place.png") 32 32, auto;
+}
+
+.right__sns__oosugi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.hidden {
+  display: none;
+}
+
+.toggle-content {
+  display: none;
+}
+
+#bottomNav {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hidden state */
+#bottomNav.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#info__copyrights {
+  color: #454545;
+  font-size: 12px;
+  font-style: light;
+  font-weight: 300;
+  line-height: auto;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media screen and (max-width: 479px) {
+  body {
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0px;
+    width: 100vw;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+  }
+
+  .info_icon_tilt {
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: space-between;
+    padding-top: 20px;
+
+    width: 90vw;
+  }
+
+  .info__logo {
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    gap: 10px;
+    flex-shrink: 0;
+    left: 0;
+  }
+
+  .right__button {
+    display: flex;
+    width: auto;
+    align-items: center;
+    flex-shrink: 0;
+    right: 0px;
+    bottom: 10px;
+    padding: 10px;
+    z-index: 10;
+  }
+
+  .logo-container {
+    display: flex;
+    padding: 10px 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 10px;
+
+    border: 1px solid #000;
+  }
+
+  .info__title {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+
+    gap: 0px;
+  }
+
+  .info__link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .link {
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .info__date {
+    align-self: stretch;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .date__course {
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+  }
+
+  .date__place {
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+  }
+
+  h1 {
+    color: #454545;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 125%;
+    margin: 0px;
+  }
+
+  h2 {
+    color: #454545;
+    font-size: 24px;
+    font-style: light;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0px;
+  }
+
+  h3 {
+    color: #454545;
+    font-size: 16px;
+    font-style: light;
+    font-weight: 300;
+    line-height: normal;
+
+    padding: 0;
+    margin: 0px;
+  }
+
+  .h3_eng {
+    color: #454545;
+    font-size: 8px;
+    font-style: light;
+    font-weight: 300;
+    line-height: auto;
+
+    margin: 0px;
+  }
+
+  p {
+    color: #454545;
+    font-size: 20px;
+    font-style: light;
+    font-weight: 300;
+    line-height: auto;
+    margin: 0px;
+  }
+
+  .right__sns__oosugi {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: fit-content;
+    align-items: left;
+    gap: 40px;
+    padding-top: 100px;
+
+    padding-bottom: 100px;
+  }
+
+  /* The switch - the box around the slider */
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  /* Hide default HTML checkbox */
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transition: 0.4s;
+    border-radius: 34px;
+    background-color: #e1e1e1;
+    border: 1px solid #454545;
+    /* Added border with a light color */
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #e1e1e1;
+    transition: 0.4s;
+    border-radius: 50%;
+    border: 1px solid #454545;
+  }
+
+  input:checked + .slider {
+    background: linear-gradient(
+      120deg,
+      rgba(185, 254, 19, 1) 0%,
+      rgba(216, 255, 155, 1) 35%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    /* Light green color for "ON" position */
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 5 #ccff00;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .toggle-content {
+    display: none;
+  }
+
+  .flex {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #bottomNav {
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    z-index: 100;
+
+    /* Initial visibility */
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  /* Hidden state */
+  #bottomNav.hidden {
+    opacity: 0;
+    pointer-events: none;
+    /* Prevent interaction when hidden */
+  }
+
+  #info__copyrights {
+    color: #454545;
+    font-size: 12px;
+    font-style: light;
+    font-weight: 300;
+    line-height: auto;
+  }
+}
+a {
+  text-decoration: none;
+}
+.messageTxt {
+  margin: 10px 0;
+  color: #454545;
+  font-size: 18px;
+  font-style: light;
+  font-weight: 200;
+}
+.mapsImg {
+  margin: 20px 0;
+  max-width: 31vw;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0px 0px 1px 0px #d1ff29;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.mapsTxt {
+  max-width: 30vw;
+  text-align: right;
+  color: #454545;
+  font-size: 12px;
+  font-style: light;
+  margin-bottom: 80px;
+}
+.mapsTxt a {
+  color: #5d7600;
+  font-size: 12px;
+  font-style: oblique;
+  text-decoration: none;
+}
+@media screen and (max-width: 1290px) {
+  .mapsImg,
+  .mapsTxt {
+    max-width: 80vw;
+    min-width: 200px;
+  }
+}
+
+/* 对于.mapsImg还需要调整图片的尺寸以适应容器宽度 */
+.mapsImg {
+  width: 100%;
+  height: auto; /* 保持图片的原始宽高比 */
+}

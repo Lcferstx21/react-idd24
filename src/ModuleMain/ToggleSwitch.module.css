@@ -1,0 +1,106 @@
+/* Styles for .right__button */
+.rotate {
+  transform: rotate(-90deg); /* 逆时针旋转90度 */
+}
+.right__button {
+  position: absolute;
+  top: 45%;
+
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  right: 0;
+  padding: 20px;
+  position: fixed;
+  z-index: 2;
+}
+
+/* Styles for h3 within .right__button */
+.right__button div {
+  color: #454545;
+  font-size: 12px; /* Adjusted to match h3 styles, ensure consistency */
+  font-style: light;
+  font-weight: 300;
+  line-height: normal;
+  padding: 0;
+  margin: 0px;
+  writing-mode: vertical-rl;
+  padding-top: 15px;
+}
+
+/* Styles specific to the toggle-switch within .right__button */
+.toggleSwitch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggleSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+  border-radius: 34px;
+
+  background-color: #ffffff;
+  border: 1px solid #454545;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  /* background-color: #ffffff; */
+  background-color: #ccff00;
+  transition: 0.4s;
+  border-radius: 50%;
+  border: 1px solid #454545;
+}
+
+input:checked + .slider {
+  background: linear-gradient(
+    120deg,
+    rgba(185, 254, 19, 1) 0%,
+    rgba(216, 255, 155, 1) 35%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 5 #ccff00;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: #ffffff;
+}
+
+/* Additional styles for responsive design adjustments */
+@media screen and (max-width: 479px) {
+  .right__button {
+    right: 0px;
+    bottom: 10px;
+    padding: 10px;
+    z-index: 10;
+  }
+
+  .right__button h3 {
+    font-size: 16px; /* Adjust for smaller screens */
+  }
+}

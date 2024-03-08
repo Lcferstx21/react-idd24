@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  /* width: fit-content; */
+  overflow-x: hidden;
+  cursor: none;
+  height: auto;
+}
+
+.appContainer {
+  position: relative;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+.header,
+.headerLogo {
+  position: relative;
+  z-index: 100;
+}
+
+.headerFadeOut {
+  animation: fadeOutAnimation 1s forwards;
+}
+
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+.headerFadeIn {
+  animation: fadeInAnimation 0.5s forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

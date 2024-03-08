@@ -1,0 +1,14 @@
+.custom-cursor {
+  pointer-events: none; /* 确保光标不会干扰页面上的其他元素 */
+  position: fixed;
+  z-index: 9999;
+  width: 32px; /* 根据你的图标大小调整 */
+  height: 32px; /* 根据你的图标大小调整 */
+  background-size: 32px 32px; /* 根据你的图标大小调整 */
+  transition: transform 0.05s ease-in-out, background-image 0.05s ease-in-out; /* 过渡效果 */
+  transform: translate(-50%, -50%); /* 使光标居中 */
+}
+
+.custom-cursor-clicked {
+  transform: translate(-50%, -50%) scale(1.5);
+}

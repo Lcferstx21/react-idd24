@@ -1,0 +1,101 @@
+.WorkWrapper {
+  position: relative;
+  width: 255px;
+  height: 300px;
+}
+
+.WorkWrapper:hover {
+  animation: shake 0.2s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.WorkWrapperBg {
+  width: 100%;
+  height: auto;
+}
+
+.workMsg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  top: 11%;
+  left: 20%;
+  z-index: 10;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  overflow-y: scroll;
+  display: none;
+}
+
+.workMsg::-webkit-scrollbar,
+.workMsg {
+  display: none; /* 隐藏滚动条 */
+}
+
+.workMsg h3,
+.workMsg p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.workMsg h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #aaff00;
+  line-height: 22px;
+}
+.authorNameEn {
+  font-size: 10px !important;
+  font-weight: 300 !important;
+}
+
+.workMsg p {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.WorkWrapperOverlay {
+  position: absolute;
+  top: 11%;
+  left: 20%;
+
+  z-index: 11;
+  border-radius: 4px;
+  box-shadow: inset -10px 0 20px -10px rgba(0, 0, 0, 0.5),
+    /* 左侧 */ inset 10px 0 10px -10px rgba(0, 0, 0, 0.5),
+    /* 右侧 */ inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5),
+    /* 底部 */ inset 0 10px 10px -10px rgba(0, 0, 0, 0.5); /* 顶部 */
+  transition: opacity 0.2s ease;
+}
+.workIcon {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+
+  transition: transform 0.2s ease;
+}
+.hidden {
+  opacity: 0;
+}
+.show {
+  display: block;
+}

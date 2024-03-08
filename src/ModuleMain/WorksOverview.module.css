@@ -1,0 +1,9 @@
+.worksOverview {
+  margin-top: 30px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* 根据需要调整间距 */
+  justify-content: center; /* 或者 center, flex-end, 等，根据需要 */
+  align-items: flex-start; /* 确保元素在交叉轴上的对齐方式 */
+}
